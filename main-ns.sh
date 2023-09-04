@@ -21,7 +21,7 @@ while :
 	echo "0. EXIT"
 	read -p "Make your choice: " c
 	case $c in
-		1) create_ns sleep 3; read -p "Press enter to continue" ;;
+		1) create_ns; sleep 3; read -p "Press enter to continue" ;;
 		2) delete_ns; sleep 3; read -p "Press enter to continue" ;;
 		3) change_ns; sleep 3; read -p "Press enter to continue" ;;
 		4) describe_ns; sleep 3; read -p "Press enter to continue" ;;
