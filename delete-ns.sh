@@ -17,6 +17,5 @@ fi
 
 }
 
-delete_ns
 
 

@@ -15,4 +15,3 @@ else
 fi
 }
 
-create_ns
