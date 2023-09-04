@@ -1,5 +1,5 @@
 #!/bin/bash
-
+source colors.sh
 
 function create_ns() {
 kubectl get namespaces

@@ -1,5 +1,5 @@
 #!/bin/bash
-
+source colors.sh
 
 
 
@@ -15,9 +15,9 @@ kubectl get namespaces | grep -q "${changeNS}"
 if [[ $? -ne 1 ]]
 	then
 		kubectl config set-context --current --namespace=${changeNS}
-		echo "Your current default namespace is: ${changeNS}"
+		echo -e "${BGreen}Your current default namespace is: ${changeNS} ${Color_Off}"
 	else
-		echo "You entered a wrong name for namespace"
+		echo -e "${Red}You entered a wrong name for namespace${Color_Off}"
 fi
 
 }
