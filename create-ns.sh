@@ -1,17 +1,15 @@
 #!/bin/bash
 source colors.sh
-
-function create_ns() {
+function create_ns(){
+	echo "Current namespaces are: "
 kubectl get namespaces
-read -p "Enter an unique namespace you wanna create: " createNS
-
+read -p "Enter an unique namespace you want create: " createNS
 
 kubectl create namespace ${createNS}
 if [[ $? -eq 0 ]]
 	then
-		echo "Your namespace at name ${createNS} created successfully!!!"
-else
-	echo "You entered wrong name for namespace"
+		echo -e "${BGreen}Your namespace ${createNS} created successfully!!! ${Color_Off}"
+	else
+		echo -e "${Red} You entered a wrong name${Color_Off}"
 fi
 }
-
